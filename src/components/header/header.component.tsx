@@ -36,7 +36,6 @@ const NavMenu = styled(Menu)`
 
 const menuItems: MenuProps['items'] = [
 	{ key: "tasks", label: <Link to="/tasks">Задачи</Link> },
-	{ key: "favorites", label: <Link to="/favorites">Избранное</Link> },
 ];
 
 const dropdownItems: (onLogout: () => void) => MenuProps['items'] = (onLogout) => [

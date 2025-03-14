@@ -60,7 +60,6 @@ export const AppRoutesComponent = () => {
 						<Route path="/register" element={<RegisterPageComponent/>}/>
 						<Route element={<PrivateRoute/>}>
 							<Route path="/tasks/:selectedTask?" element={<TasksPageComponent/>}/>
-							<Route path="/favorites" element={<FavoritesPageComponent/>}/>
 						</Route>
 					</Routes>
 				</RoutesWrapper>
