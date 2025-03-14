@@ -1,26 +1,7 @@
 @import "./shared/fonts/fonts.css";
 
-:root {
-	--primary-color: #3f92d2;
-	--secondary-color: #ff4900;
-	--hover-color: #66a3d2;
-	--active-color: #0b61a4;
-	--light-color: #ffffff;
-	--dark-color: #d9d9d9;
-
-	--primary-text-color: #161616;
-	--light-text-color: #ffffff;
-	--gray-text-color: #404040;
-	--error-text-color: #ff1616;
-
-	--shadow-color: #16161632;
-	--shadow-hover-color: #16161624;
-	--shadow-active-color: #16161664; 
-}
-
 html {
 	overflow-y: auto;
-	min-width: 100dvh;
 }
 
 body, input, button, a {
