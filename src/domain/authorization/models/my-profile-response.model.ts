@@ -4,8 +4,6 @@ export interface MyProfileResponseModel {
 	username: string,
 	email: string,
 	provider: string,
-	confirmed: string,
-	blocked: string,
-	createdAt: string,
-	updatedAt: string
+	confirmed: boolean,
+	blocked: boolean,
 }

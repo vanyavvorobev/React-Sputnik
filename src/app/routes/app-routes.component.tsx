@@ -9,7 +9,6 @@ const HomePageComponent = React.lazy(() => import("./../../pages/home/home-page.
 const LoginPageComponent = React.lazy(() => import("./../../pages/login/login-page.component"));
 const RegisterPageComponent = React.lazy(() => import("../../pages/register/register-page.component"));
 const TasksPageComponent = React.lazy(() => import("./../../pages/tasks/tasks-page.component"));
-const FavoritesPageComponent = React.lazy(() => import("./../../pages/favorites/favorites-page.component"));
 
 const RoutesWrapper = styled.div`
 	margin-top: 64px;

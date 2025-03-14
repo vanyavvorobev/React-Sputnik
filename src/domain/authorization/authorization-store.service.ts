@@ -20,8 +20,8 @@ type UserProfile = {
 	username: string,
 	email: string,
 	provider: string,
-	confirmed: string,
-	blocked: string,
+	confirmed: boolean,
+	blocked: boolean,
 }
 
 type AuthorizationStoreState = {
@@ -90,8 +90,7 @@ export const useAuthorizationStoreService = create<AuthorizationStoreState>((set
 
 	sendEmailConfirmation: async (confirmationParams) => {
 		try {
-			const response = await networkInstance.post<EmailConfirmationResponseModel>("auth/send-email-confirmation", confirmationParams);
-			const result = response.data;
+			await networkInstance.post<EmailConfirmationResponseModel>("auth/send-email-confirmation", confirmationParams);
 		}
 		catch(error) {
 			console.log(error);
@@ -100,7 +99,7 @@ export const useAuthorizationStoreService = create<AuthorizationStoreState>((set
 
 	confirmEmail: async (confirmParams) => {
 		try {
-			const response = await networkInstance.get(`auth/email-confirmation?confirmation=${confirmParams.confirmation}`);
+			await networkInstance.get(`auth/email-confirmation?confirmation=${confirmParams.confirmation}`);
 		}
 		catch(error) {
 			console.log(error);

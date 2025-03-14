@@ -42,10 +42,6 @@ export const useTasksStoreService = create<TasksStoreState>((set, get) => ({
 
 	loadTasks: async (loadParams) => {
 		try {
-			// let path = "";
-			// if(loadParams) path = "?" + Object.entries(loadParams)
-    		// 	.filter(([_, value]) => value !== undefined && value !== null)
-    		// 	.map(([key, value]) => `${key}=${value}`.replace("[", "%5B").replace("]", "%5D")).join("&");
 		
 			const response = await networkInstance.get<{data: Task[]}>(`tasks`)
 			const result = response.data.data;
